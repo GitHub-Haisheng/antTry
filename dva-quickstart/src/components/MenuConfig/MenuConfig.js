@@ -70,9 +70,11 @@ const MainLayout = React.createClass({
             {this.props.children}
           </div>
         </div>
-        <div className={styles.foot}>
-         this is foot
-        </div>
+        {
+        // <div className={styles.foot}>
+        //  this is foot
+        // </div>
+        }
       </div>
     );
   }

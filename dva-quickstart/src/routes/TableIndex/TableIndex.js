@@ -135,22 +135,6 @@ class TableIndex extends React.Component{
         });
 
     } 
-    // handleTableChange = (pagination, filters, sorter)=> {
-    //     //this = TableIndex
-    //     const pager = this.state.pagination;
-    //     pager.current = pagination.current;
-    //     this.setState({
-    //       pagination: pager,
-    //     });
-    //     this.fetch({
-    //       results: pagination.pageSize,
-    //       page: pagination.current,
-    //       sortField: sorter.field,
-    //       sortOrder: sorter.order,
-    //       ...filters,
-    //     });
-
-    // } 
 
     componentDidMount() {
         this.fetch();
@@ -159,7 +143,7 @@ class TableIndex extends React.Component{
     render (){
         return(
             <div>  
-                <Tabs onChange={callback} type="card" style={{padding:50}}>
+                <Tabs onChange={callback} type="card">
                     <TabPane tab="Tab 1" key="1">
                         <h2>分页表格</h2>
                         <Table columns={columns} dataSource={data} pagination={pagination}/>
