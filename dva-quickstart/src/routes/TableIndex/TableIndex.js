@@ -158,7 +158,9 @@ class TableIndex extends React.Component{
                         onChange={this.handleTableChange.bind(this)}
                     />
                     </TabPane>
-                    <TabPane tab="Tab 3" key="3">Content of Tab Pane 3</TabPane>
+                    <TabPane tab="Tab 3" key="3">
+                        <Table/>
+                    </TabPane>
                 </Tabs>
             </div>
         )

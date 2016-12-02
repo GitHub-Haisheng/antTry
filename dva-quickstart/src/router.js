@@ -3,6 +3,7 @@ import { Router, Route, IndexRoute, Link } from 'dva/router';
 import MenuConfig from './components/MenuConfig/MenuConfig';
 import IndexPage from './routes/IndexPage';
 import TableIndex from './routes/TableIndex/TableIndex';
+import TableUser from './routes/TableUser/TableUser';
 import Products from './routes/Products';
 
 export default function({ history }) {
@@ -12,6 +13,7 @@ export default function({ history }) {
             <IndexRoute component={IndexPage}/>
             <Route path="/table" component={TableIndex} />
             <Route path="/products" component={Products} />
+            <Route path="/demo" component={TableUser} />
         </Route>       
     </Router>
   );

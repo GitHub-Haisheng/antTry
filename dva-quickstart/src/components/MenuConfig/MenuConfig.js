@@ -48,7 +48,7 @@ const MainLayout = React.createClass({
                 <SubMenu key="sub1" title={<span><Icon type="mail" /><span>first try</span></span>}>
                     <Menu.Item key="1"><Link to="/table"></Link>我的表格</Menu.Item>
                     <Menu.Item key="2"><Link to="/">我的表单</Link></Menu.Item>
-                    <Menu.Item key="4"><Link to="/">还没定</Link></Menu.Item>
+                    <Menu.Item key="4"><Link to="/demo">user demo</Link></Menu.Item>
                     {/*<Menu.Item key="3"><Link to="/404">404</Link></Menu.Item>*/}
                 </SubMenu>
                 <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>whatever~</span></span>}>
