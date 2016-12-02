@@ -1,6 +1,7 @@
 //namespace:model state 在全局state所用的key,state是默认数据
+import { hashHistory } from 'dva/router';
 export default{
-    namespace:"TableUser",
+    namespace:"users",
 
     state:{
 
@@ -19,12 +20,49 @@ export default{
         *'delete'(){},
         *update(){},
     },
-
+    subscriptions:{
+        setup({dispatch,history}){
+            console.log("history",history)
+            history.listen(location=>{
+                console.log('location',location.path)
+                if(location.path === "/demo"){
+                    dispatch({
+                        type:"querySuccess",
+                        payload:{}
+                    })
+                }
+            })
+        }
+    },
     reducer:{
         showLoading(){},//控制加载状态的reducer
         showModal(){},//控制Model显示状态的reducer
         hideModal(){},
-        querySuccess(){},
+        querySuccess(state){
+            const mock = {
+                total:3,
+                current:1,
+                loading:false,
+                dataSource:[
+                    {
+                        name: '张三',
+                        age: 23,
+                        address: '云南',
+                    },
+                    {
+                        name: '李四',
+                        age: 24,
+                        address: '杭州',
+                    },
+                    {
+                        name: '王五',
+                        age: 25,
+                        address: '上海',
+                    },
+                ]
+            };
+            return {...state,...mock,loading:false};
+        },
         createSuccess(){},
         deleteSuccess(){},
         updateSuccess(){}
