@@ -45,7 +45,6 @@ const TableUser = ({
         onChange: ()=>{},
     };
 
-
     return(
         <div>
             <Table columns={columns}
@@ -57,6 +56,7 @@ const TableUser = ({
         </div>
     )
 };
+
 TableUser.propType = {
   TableUser:PropTypes.object
 }

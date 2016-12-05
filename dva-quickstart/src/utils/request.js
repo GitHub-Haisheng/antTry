@@ -16,6 +16,7 @@ function checkStatus(response) {
 
 /**
   工具函数
+  request是封装的一个网络请求库
  * Requests a URL, returning a promise.
  *
  * @param  {string} url       The URL we want to request
