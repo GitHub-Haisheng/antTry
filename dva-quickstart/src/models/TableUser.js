@@ -1,5 +1,6 @@
-import { hashHistory } from 'dva/router';
+
 //namespace:model state 在全局state所用的key,state是默认数据
+import { hashHistory } from 'dva/router';
 export default{
     namespace:"users",
 
@@ -33,13 +34,11 @@ export default{
             })
         }
     },
-
     reducers:{
         showLoading(){},//控制加载状态的reducer
         showModal(){},//控制Model显示状态的reducer
         hideModal(){},
         querySuccess(state){
-            console.log('state',state)
             const mock = {
                 total: 3,
                 current: 1,

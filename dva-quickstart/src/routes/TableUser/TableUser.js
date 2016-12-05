@@ -1,10 +1,9 @@
-import React from 'react';
+import React,{components,PropTypes} from 'react';
 import { Table,Icon,Button,Tabs } from 'antd';
 import styles from './TableUser.less';
 import reqwest from 'reqwest';
-
 // 引入connect工具函数
-import { connect } from 'dva';
+import { connect } from "dva";
 
 //引入元素
 import UserList from '../../components/TableUser/UserList';
@@ -22,6 +21,7 @@ const TableUser = ({
         current,
         loading,
         dataSource:list,
+
         // dataSource:[
         //     {
         //         name: '张三',
@@ -40,6 +40,7 @@ const TableUser = ({
         //     },
         // ]
     };
+
     return(
         <div>
             {//用户信息列表展示}
@@ -48,7 +49,6 @@ const TableUser = ({
         </div>
     )
 };
-
 function mapStateToProps({ users }){
     return { users };
 };

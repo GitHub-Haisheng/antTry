@@ -1,6 +1,6 @@
 import './index.html';
 import './index.css';
-import dva from 'dva';
+import dva,{ connect } from 'dva';
 
 // 1. Initialize
 // const app = dva();
